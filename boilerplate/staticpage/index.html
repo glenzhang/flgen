@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//l0.51fanli.net">
+    <link rel="dns-prefetch" href="//l1.51fanli.net">
+    <link rel="dns-prefetch" href="//l2.51fanli.net">
+    <link rel="dns-prefetch" href="//l3.51fanli.net">
+    <link rel="dns-prefetch" href="//l4.51fanli.net">
+    <link rel="dns-prefetch" href="//static2.51fanli.net">
+    <link rel="shortcut icon" href="http://www.fanli.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.fanli.com/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="http://static2.51fanli.net/webapp/css/base.css">
+
+    <script id="J_script_attrsniffer" data-remwidth="750" data-remswitch="1" src="http://static2.51fanli.net/static/?f=webapp/js/common/attrsniffer.js"></script>
+    <script>
+        var wagv = {
+            app: "${basePath}",
+            isFromWeixin: navigator.userAgent.toLowerCase().indexOf("micromessenger") > -1,
+            timeStamp: "${pageTime}",
+            pageJsListArr: [],
+            pageJsLoadedCallbackArr: []
+        };
+    </script>
+</head>
+
+<body>
+    <div class="wrap"></div>
+
+    <script src="http://static2.51fanli.net/common/libs/headjs/head.load.min.js"></script>
+    <script>
+        (function() {
+            wagv.pageJsListArr.push("http://static2.51fanli.net/common/libs/fmu/js/vendors/jquery/jquery.min.js");
+
+            setTimeout(function() {
+                head.load(wagv.pageJsListArr, function() {
+                    for (var i = 0, len = wagv.pageJsLoadedCallbackArr.length; i < len; ++i) {
+                        wagv.pageJsLoadedCallbackArr[i]();
+                    }
+                });
+            }, 10);
+
+        }());
+    </script>
+</body>
+
+</html>

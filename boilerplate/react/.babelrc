@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "transform-class-properties",
+        "transform-class-constructor-call",
+        "syntax-class-constructor-call",
+        "transform-object-assign"
+    ],
+    "presets": [
+        "es2015",
+        "react"
+    ]
+}

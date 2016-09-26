@@ -1,0 +1,112 @@
+<?php
+    $title = '返利专享福利';
+
+    $cssList = array(implode(",", array(
+        '//static2.51fanli.net/static/?f=webapp/css/base.css',
+        'common/libs/fmu/css/dialog.css',
+        'common/libs/fmu/css/cleanup.css',
+        'common/libs/fmu/css/countdown.css',
+        'webapp/css/ui/dialog-v2.css',
+        'webapp/css/huodong/sidebar.css',
+        'huodong/cpa/css/index.css'))
+    );
+
+    $jsList = array(implode(",", array(
+        '//static2.51fanli.net/static/?f=webapp/js/base.js',
+        'common/js/fanli/trace/ubt.js',
+        'common/libs/fmu/js/core/fmu.js',
+        'common/libs/fmu/js/core/widget.js',
+        'common/libs/fmu/js/extend/jquery.extend.js',
+        'common/libs/fmu/js/plugins/countdownbutton.js',
+        'common/libs/fmu/js/fanli/verifycode.js')),
+
+        implode(",", array(
+        '//static2.51fanli.net/static/?f=common/libs/fmu/js/plugins/imglazyload.js',
+        'common/libs/fmu/js/widget/dialog.js',
+        'common/libs/fmu/js/plugins/cleanup.js',
+        'common/libs/fmu/js/widget/countdown.js',
+        'webapp/js/common/weixin/share.js',
+        'webapp/js/huodong/sidebar.js',
+        'huodong/cpa/js/index.js'))
+    );
+?>
+
+<include file="$header" remwidth="640" remswitch="1" />
+
+<div class="cap-wrap" style="background-color: {$gaea['top'][0]['data1']};" >
+    <notempty name="userIsBind">
+        <div id="J_tips_phone">
+            <div class="tips-height"></div>
+            <div class="tips-phone">
+                已关联手机号：{$bindInfo.mobile}<br />
+                用此手机号去本活动所有商家注册购物都有返利哦！<br />
+                了解返利信息请查看站内信或活动规则
+                <a id="J_tips_close" href="javascript:void(0);">&times;</a>
+            </div>
+        </div>
+    </notempty>
+
+    <div class="cap-top">
+        <div id="J_countdown" class="fmu-countdown cpa-countdown" data-remain="" data-start="{$gaea['time'][0]['data1']}" data-end="{$gaea['time'][0]['data2']}" style="display:none;">
+            <p>距离活动结束还有</p>
+            <span class="fmu-countdown-unitbox"><span class="J_day fmu-countdown-unit"></span>天</span>
+            <span class="fmu-countdown-unitbox"><span class="J_hour fmu-countdown-unit"></span>时</span>
+            <span class="fmu-countdown-unitbox"><span class="J_minute fmu-countdown-unit"></span>分</span>
+            <span class="fmu-countdown-unitbox"><span class="J_second fmu-countdown-unit"></span>秒</span>
+        </div>
+
+        <img class="w100" src="{$gaea['top'][0]['img']}" alt="{$gaea['top'][0]['data2']}" />
+    </div>
+
+    <div class="cap-box">
+        <volist name="gaea.p_list" id="vo">
+            <notempty name="vo.link">
+                <a href="javascript:void(0);" data-spm="shop_cap.h5.pty-go~ptid-{$vo.data1}" data-href="{$vo.link}" class="J_item">
+                    <img class="w100 J_lazyimg" src="http://static2.51fanli.net/common/images/loading/spacer.png" data-original="{$vo.img}" alt="{$vo.name}" />
+                </a>
+            <else />
+                <img class="w100 J_lazyimg J_item" src="http://static2.51fanli.net/common/images/loading/spacer.png" data-original="{$vo.img}" alt="{$vo.name}" />
+            </notempty>
+        </volist>
+    </div>
+
+    <div class="cap-rule" style="background:{$gaea['rule'][0]['data2']};">
+        {$gaea['rule'][0]['data1']}
+    </div>
+</div>
+
+<div id="J_receive_dialog" class="fmu-dl-wrap receive-dialog">
+    <a class="J_fmu_dl_close btn-close" href="javascript:void(0);">&times;</a>
+
+    <h3><img class="w100" src="{$gaea['pop_title'][0]['img']}" alt="{$gaea['pop_title'][0]['data1']}" /></h3>
+
+    <div id="J_fill_phone_panel" class="content" style="display:none;">
+        <div class="input-box">
+            <input id="J_phone_num" class="input-receive" name="mobile" type="tel" maxlength="11" placeholder="11位大陆手机号码">
+            <div class="text">*用<strong>此手机号</strong>去商家注册购物才有返利哦！</div>
+        </div>
+        <div class="form-vcode input-box">
+            <input class="fui-input" type="tel" name="code" maxlength="6" id="J_code" placeholder="请输入短信验证码">
+            <input class="fui-vcode-btn fui-vcode-disabled-btn" id="J_get_code" type="button" value="获取验证码">
+        </div>
+
+        <button class="fmu-dl-btn fui-btn fui-btn-rect fui-btn-white btn-confirm" id="J_goto_enjoy_one">确认，去注册</button>
+    </div>
+
+    <div id="J_has_phone_panel" class="content-modify" style="display:none;">
+        <div class="text-phone">{$userInfo.mobile}</div>
+        <div class="text-tips">*用<strong>此手机号</strong>去商家注册购物才有返利哦！</div>
+        <div class="btn-box">
+            <a class="fmu-dl-btn fui-btn fui-btn-rect fui-btn-white btn-confirm" id="J_to_fill_phone_trigger">修改手机号</a>
+            <button class="fmu-dl-btn fui-btn fui-btn-rect fui-btn-white btn-confirm" id="J_goto_enjoy_two">确认，去注册</button>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    <input type="hidden" id="J_has_reg_phone" value="{$userHasMobile}" />
+    <input type="hidden" id="J_booked_phone" value="{$bindInfo.mobile}" />
+</div>
+
+<include file="Public:inc_sidebar" />
+<include file="$footer" />

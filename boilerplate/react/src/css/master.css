@@ -1,0 +1,8 @@
+body {
+    background-color: #eee;
+    text-align: center;
+}
+
+:local(.page_wrap) {
+    margin: 0.2rem 0.1rem;
+}

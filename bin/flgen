@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+var colors = require('colors');
+var program = require('commander');
+
+var log = require('../libs/log').log;
+
+program.version(require('../package.json').version.green)
+    .option('-r, --react', 'Add react bolierplate'.green)
+    .option('-a, --angular', 'Add angular bolierplate'.green)
+    .option('-s, --staticpage', 'Add static bolierplate'.green);
+
+program.command('init <projectname>')
+    .description('Initiallize the project in the <projecname>')
+    .action(function(name, command) {
+        var type = 'react';
+        log('init '.green + name.yellow);
+
+        if (program.angular) {
+            type = 'angular';
+            log('start load angular project bolierplate '.cyan);
+        } else if (program.staticpage) {
+            type = 'staticpage';
+            log('start load static  bolierplate '.cyan);
+        } else {
+            log('start load react project bolierplate '.cyan);
+        }
+
+        require('../libs/init').init(name, type);
+    });
+
+program.parse(process.argv);

@@ -1,0 +1,21 @@
+{
+  "name": "flgen",
+  "version": "0.0.1",
+  "description": "template gengerator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "glenzhang@live.com",
+  "bin": {
+    "flgen": "bin/flgen"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "react-router": "^2.5.2",
+    "vinyl-fs": "^2.4.3",
+    "which": "^1.2.10"
+  }
+}
