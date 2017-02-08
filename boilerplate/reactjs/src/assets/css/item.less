@@ -1,0 +1,30 @@
+@import 'mixins';
+@import 'var-color';
+
+:local(.item-list) {
+    padding: 0 0.3rem;
+    li {
+        .flex();
+        padding: 0.32rem 0;
+        border-bottom: 1px solid #ddd;
+        img {
+            .flex0();
+            width: 2rem;
+            height: 1.6rem;
+            margin-right: 0.28rem;
+        }
+        .desc {
+            .flex1()
+        }
+    }
+    li a {
+        .flex();
+        color: @three;
+    }
+}
+
+.fl-hairlines:local(.item-list) {
+    li {
+        border-width: 0.6px;
+    }
+}

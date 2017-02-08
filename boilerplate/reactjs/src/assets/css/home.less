@@ -1,0 +1,35 @@
+@import "var-color";
+@height: 0.6rem;
+:local(.wrap) {
+    h1 {
+        height: 0.5rem;
+        text-align: center;
+        line-height: 0.5rem;
+        color: @white;
+        background-color: @orange;
+        font-size: 0.24rem;
+    }
+    .catalog {
+        margin-bottom: 0.1rem;
+        .title {
+            height: @height;
+            padding-left: 0.1rem;
+            background: #2b88cf;
+            color: #fff;
+            font-weight: bold;
+            line-height: @height;
+        }
+    }
+    .catalog {
+        li {
+            height: @height;
+            padding-left: 0.1rem;
+            line-height: @height;
+            border-bottom: 1px solid #e5e5e5;
+            a {
+                color: @six;
+                display: block;
+            }
+        }
+    }
+}

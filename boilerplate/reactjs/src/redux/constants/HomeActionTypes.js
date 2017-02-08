@@ -1,0 +1,1 @@
+export const GET_HOME_TEXT = 'GET_HOME_TEXT';

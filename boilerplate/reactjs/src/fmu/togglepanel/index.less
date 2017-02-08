@@ -1,0 +1,71 @@
+@import '../../assets/css/mixins';
+:local(.tp) {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    .transition(transform, .3s, ease-in-out);
+    will-change: transform;
+}
+
+:local(.mask) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 98;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+:local(.up) {
+    left: 0;
+    bottom: 0;
+}
+
+:local(.up.hide) {
+    transform: translateY(100%);
+}
+
+:local(.up.show) {
+    transform: translateY(0);
+}
+
+:local(.down) {
+    left: 0;
+    top: 0;
+}
+
+:local(.down.hide) {
+    transform: translateY(-100%);
+}
+
+:local(.down.show) {
+    transform: translateY(0);
+}
+
+:local(.left) {
+    left: 0;
+    top: 0;
+}
+
+:local(.left.hide) {
+    transform: translateX(-100%);
+}
+
+:local(.left.show) {
+    transform: translateX(0);
+}
+
+:local(.right) {
+    right: 0;
+    top: 0;
+}
+
+:local(.right.hide) {
+    transform: translateX(100%);
+}
+
+:local(.right.show) {
+    transform: translateX(0);
+}

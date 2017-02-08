@@ -1,0 +1,36 @@
+.font-face(@family, @path) {
+    font-family: @family;
+    src:url('@{path}.eot');
+    src:url('@{path}.eot?#iefix') format('embedded-opentype'), url('@{path}.woff') format('woff'), url('@{path}.ttf') format('truetype'), url('@{path}.svg#icon') format('svg');
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+.flex() {
+    display: -webkit-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex0() {
+    display: block;
+    -webkit-box-flex: 0;
+}
+
+.flex1() {
+    display: block;
+    -webkit-box-flex: 1;
+}
+
+.flex2() {
+    display: block;
+    -webkit-box-flex: 2;
+}
+
+.flex3() {
+    display: block;
+    -webkit-box-flex: 3;
+}

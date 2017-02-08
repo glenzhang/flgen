@@ -1,0 +1,132 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+body {
+    line-height:1;
+    font:14px 'Helvetica Neue',Helvetica,STHeiTi,sans-serif;
+    text-align: left;
+}
+a {
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+}
+a:active{outline:none;}
+a.green:link, a.green:visited, .green{color:#060;}
+a.green:hover, a.green:active{color:#F60;}
+a.aqua:link, a.aqua:visited, .aqua{color:#8B3;}
+a.aqua:hover, a.aqua:active{color:#F60;}
+a.white:link, a.white:visited, .white{color:#FFF;}
+a.white:hover, a.white:active{color:#FFF;}
+a.red:link, a.red:visited, .red{color:#FE4300;}
+a.red:hover, a.red:active{color:#F60;}
+a.pink:link, a.pink:visited, .pink{color:#F69;}
+a.pink:hover, a.pink:active{color:#F60;}
+a.blue:link, a.blue:visited, .blue{color:#0087D5;}
+a.blue:hover, a.blue:active{color:#F60;}
+a.orange:link, a.orange:visited, .orange{color:#F60;}
+a.orange:hover, a.orange:active{color:#F60;}
+a.yellow:link, a.yellow:visited, .yellow{color:#FF0;}
+a.yellow:hover, a.yellow:active{color:#FFF;}
+a.zero:link, a.zero:visited, .zero{color:#000;}
+a.zero:hover, a.zero:active{color:#F60;}
+a.three:link, a.three:visited, .three{color:#333;}
+a.three:hover, a.three:active{color:#F60;}
+a.six:link, a.six:visited, .six{color:#666;}
+a.six:hover, a.six:active{color:#F60;}
+a.nine:link, a.nine:visited, .nine{color:#999;}
+a.nine:hover, a.nine:active{color:#F60;}
+a.ccc:link, a.ccc:visited, .ccc{color:#ccc;}
+a.ccc:hover, a.ccc:active{color:#F60;}
+a.under:link, a.under:visited{text-decoration:none;}
+a.under:hover, a.under:active{text-decoration:underline;}
+a.underline:link, a.underline:visited{text-decoration:underline;}
+a.underline:hover, a.underline:active{text-decoration:underline;}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}

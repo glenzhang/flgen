@@ -1,0 +1,27 @@
+// {
+//     "parserOptions": {
+//         "ecmaVersion": 6,
+//         "sourceType": "module",
+//         "ecmaFeatures": {
+//             "jsx": true
+//         }
+//     },
+//     "rules": {
+//         "semi": 2
+//     },
+//     "parser": "babel-eslint",
+//     "plugins": [
+//         "react"
+//     ],
+//     "extends": ["eslint:recommended", "plugin:react/recommended"]
+// }
+
+
+{
+    //npm install -g eslint &&  npm install -g babel-eslint
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parser": "babel-eslint"
+}

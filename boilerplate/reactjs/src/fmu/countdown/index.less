@@ -1,0 +1,30 @@
+@import '../../assets/css/var-font';
+@zero: #000;
+@white: #fff;
+:local(.cd) {
+    font-size: 14px;
+    span {
+        vertical-align: middle;
+    }
+    .num {
+        display: inline-block;
+        height: 16px;
+        margin-right: 2px;
+        vertical-align: middle;
+    }
+    .num:last-child {
+        margin-right: 0;
+    }
+    em {
+        display: inline-block;
+        min-width: 16px;
+        height: 16px;
+        margin-right: 1px;
+        text-align: center;
+        background-color: @zero;
+        border-radius: 2px;
+        color: @white;
+        font: normal bold 14px/16px led-font;
+        vertical-align: middle;
+    }
+}
