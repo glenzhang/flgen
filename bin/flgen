@@ -6,14 +6,15 @@ var program = require('commander');
 var log = require('../libs/log').log;
 
 program.version(require('../package.json').version.green)
-    .option('-r, --react', 'Add react bolierplate'.green)
+    .option('-r, --reactjs', 'Add react web bolierplate'.green)
     .option('-a, --angular', 'Add angular bolierplate'.green)
-    .option('-s, --staticpage', 'Add static bolierplate'.green);
+    .option('-s, --staticpage', 'Add static bolierplate'.green)
+    .option('-h, --huodong', 'Add huodong bolierplate'.green);
 
 program.command('init <projectname>')
     .description('Initiallize the project in the <projecname>')
     .action(function(name, command) {
-        var type = 'react';
+        var type = 'reactjs';
         log('init '.green + name.yellow);
 
         if (program.angular) {
@@ -21,9 +22,12 @@ program.command('init <projectname>')
             log('start load angular project bolierplate '.cyan);
         } else if (program.staticpage) {
             type = 'staticpage';
-            log('start load static  bolierplate '.cyan);
+            log('start load static bolierplate '.cyan);
+        } else if (program.huodong) {
+            type = 'huodong';
+            log('start load huodong bolierplate '.cyan);
         } else {
-            log('start load react project bolierplate '.cyan);
+            log('start load reactjs project bolierplate '.cyan);
         }
 
         require('../libs/init').init(name, type);

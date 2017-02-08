@@ -7,7 +7,7 @@ var runCmd = require('./runcmd').runCmd;
 
 function init(name, type) {
     if (!type) {
-        type = 'react';
+        type = 'reactjs';
     }
 
     copyFiles(name, type);
